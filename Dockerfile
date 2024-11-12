@@ -1,11 +1,11 @@
-# Usamos una imagen oficial de PHP
-FROM php:7.4-cli
+# Dockerfile
+FROM php:latest
 
-# Establecer directorio de trabajo
-WORKDIR /app
+# Copy the PHP application to the container
+COPY index.php /var/www/html/index.php
 
-# Copiar el código fuente al contenedor
-COPY index.php .
+# Expose port 8080 for web access
+EXPOSE 8080
 
-# Comando para ejecutar el programa
-CMD ["php", "index.php"]
+# Start the PHP built-in web server
+CMD ["php", "-S", "0.0.0.0:8080", "-t", "/var/www/html"]
