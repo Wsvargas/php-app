@@ -1,4 +1,6 @@
 # PHP Docker App 🐘🚀
+# deploy in railway: php-app-production.up.railway.app
+
 
 **PHP Docker App** is a simple PHP application that prints **"Hello from PHP!"** to the console. This project is containerized with Docker, making it easy to deploy and run across different environments. 🌍
 
